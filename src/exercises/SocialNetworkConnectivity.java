@@ -10,6 +10,57 @@
  * better and use extra space proportional to N.
  */
 
+/**
+ * Exemplary results
+ * 
+ * Enter the number of members: 
+ * 250000
+ * Enter the number of timestamps: 
+ * 1000000
+ * File generated in = H:0 M:0 S:2 nS:337806924
+ * Instances generated in = H:0 M:0 S:0 nS:13396823
+ * ======================================================
+ * QuickFindUF
+ * Couldn't find connection between all members.
+ * Number of components: 89
+ * Time = H:0 M:0 S:37 nS:519162104
+ * ======================================================
+ * QuickUnionUF
+ * Couldn't find connection between all members.
+ * Number of components: 89
+ * Time = H:0 M:8 S:41 nS:381639539
+ * ======================================================
+ * WeightedQuickUnionUF
+ * Couldn't find connection between all members.
+ * Number of components: 89
+ * Time = H:0 M:0 S:0 nS:468117044
+ * ======================================================
+ * WeightedQuickUnionByHeightUF
+ * Couldn't find connection between all members.
+ * Number of components: 89
+ * Time = H:0 M:0 S:0 nS:427341836
+ * ======================================================
+ * QuickUnionPathCompressionUF
+ * Couldn't find connection between all members.
+ * Number of components: 89
+ * Time = H:0 M:0 S:0 nS:437867707
+ * ======================================================
+ * WeightedQuickUnionPathCompressionUF
+ * Couldn't find connection between all members.
+ * Number of components: 89
+ * Time = H:0 M:0 S:0 nS:334399415
+ * 
+ * 
+ * Times Comparison
+ * ======================================================
+ * QuickFindUF				112,19865
+ * QuickUnionUF				1559,15835
+ * WeightedQuickUnionUF			1,39987
+ * WeightedQuickUnionByHeightUF		1,27794
+ * QuickUnionPathCompressionUF		1,30942
+ * WeightedQuickUnionPathCompressionUF	1,00000
+ */
+
 package exercises;
 
 import java.io.BufferedReader;
@@ -25,13 +76,14 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-import library.QuickFindUF;
-import library.QuickUnionPathCompressionUF;
-import library.QuickUnionUF;
-import library.UF;
-import library.WeightedQuickUnionByHeightUF;
-import library.WeightedQuickUnionPathCompressionUF;
-import library.WeightedQuickUnionUF;
+
+import resources.QuickFindUF;
+import resources.QuickUnionPathCompressionUF;
+import resources.QuickUnionUF;
+import resources.UF;
+import resources.WeightedQuickUnionByHeightUF;
+import resources.WeightedQuickUnionPathCompressionUF;
+import resources.WeightedQuickUnionUF;
 
 public class SocialNetworkConnectivity {
 	private static int numberOfMembers;
@@ -58,6 +110,9 @@ public class SocialNetworkConnectivity {
 
 	public static void main(String[] args) {
 		
+		/**
+		 * Getting user input of numberOfMembers and numberOfTimestamps
+		 */
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the number of members: ");
 		numberOfMembers = scanner.nextInt();
@@ -65,17 +120,19 @@ public class SocialNetworkConnectivity {
 		numberOfTimestamps = scanner.nextInt();
 		scanner.close();
 		
+		/**
+		 * Generating logFile with values given by user,
+		 * calculating time taken to generate and printing that time.
+		 */
 		startTime = System.nanoTime();
 		generateLogFile(numberOfMembers, numberOfTimestamps);
 		timeLast = System.nanoTime() - startTime;
+		calculateTime("File generated in", timeLast);
 		
-		hours = TimeUnit.NANOSECONDS.toHours(timeLast);
-		minutes = TimeUnit.NANOSECONDS.toMinutes(timeLast)%60;
-		seconds = TimeUnit.NANOSECONDS.toSeconds(timeLast)%60;
-		nanoSeconds = timeLast%1000000000;
-		System.out.printf("File generated in = H:%d M:%d S:%d nS:%d%n", hours, minutes, seconds, nanoSeconds);
-		
-		
+		/**
+		 * Initializing algorithm instances,
+		 * calculating time taken to initialize and printing that time.
+		 */
 		startTime = System.nanoTime();
 		quickFind = new QuickFindUF(numberOfMembers);
 		quickUnion = new QuickUnionUF(numberOfMembers);
@@ -84,14 +141,11 @@ public class SocialNetworkConnectivity {
 		quickUnionPathCompression = new QuickUnionPathCompressionUF(numberOfMembers);
 		weightedQuickUnionPathCompression = new WeightedQuickUnionPathCompressionUF(numberOfMembers);
 		timeLast = System.nanoTime() - startTime;
-
-		hours = TimeUnit.NANOSECONDS.toHours(timeLast);
-		minutes = TimeUnit.NANOSECONDS.toMinutes(timeLast)%60;
-		seconds = TimeUnit.NANOSECONDS.toSeconds(timeLast)%60;
-		nanoSeconds = timeLast%1000000000;
-		System.out.printf("Instances generated in = H:%d M:%d S:%d nS:%d%n", hours, minutes, seconds, nanoSeconds);
+		calculateTime("Instances generated in", timeLast);
 		
-		
+		/**
+		 * Running algorithms and initializing variables of time taken.
+		 */
 		double quickFindTime = runAlgorithm(quickFind);
 		double quickUnionTime = runAlgorithm(quickUnion);
 		double weightedQuickUnionTime = runAlgorithm(weightedQuickUnion);
@@ -99,6 +153,10 @@ public class SocialNetworkConnectivity {
 		double quickUnionPathCompressionTime =runAlgorithm(quickUnionPathCompression);
 		double weightedQuickUnionPathCompressionTime = runAlgorithm(weightedQuickUnionPathCompression);
 		
+		/**
+		 * Creating list of times taken to run by different algorithms
+		 * to get the shortest time taken.
+		 */
 		ArrayList<Double> algorithmTimes = new ArrayList<>();
 		algorithmTimes.add(quickFindTime);
 		algorithmTimes.add(quickUnionTime);
@@ -107,9 +165,11 @@ public class SocialNetworkConnectivity {
 		algorithmTimes.add(quickUnionPathCompressionTime);
 		algorithmTimes.add(weightedQuickUnionPathCompressionTime);
 		Collections.sort(algorithmTimes);
-		
 		double shortestTime = algorithmTimes.get(0);
 		
+		/**
+		 * Printing comparison of time taken by algorithms in relation to the shortest time. 
+		 */
 		System.out.println("\n");
 		System.out.println("Times Comparison");
 		System.out.println("======================================================");
@@ -123,35 +183,38 @@ public class SocialNetworkConnectivity {
 				weightedQuickUnionByHeightTime/shortestTime, quickUnionPathCompressionTime/shortestTime, weightedQuickUnionPathCompressionTime/shortestTime);
 	}
 	
-	public static long runAlgorithm(UF un) {
+	/**
+	 * Returning the times of solving given problem by algorithm {@code uf}.
+	 * Firstly reads data from earlier generated logFile. Then runs the algorithm. 
+	 * Printing results and time taken to run.
+	 * 
+	 * @param uf type of algorithm
+	 * @return the time of solving problem by given algorithm
+	 */
+	public static long runAlgorithm(UF uf) {
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String input;
 			startTime = System.nanoTime();
-			while ((un.count() != 1) && ((input = br.readLine()) != null)) {
+			while ((uf.count() != 1) && ((input = br.readLine()) != null)) {
 				String[] line = input.split(" ");
 				time = line[0];
 				p = Integer.parseInt(line[1]);
 				q = Integer.parseInt(line[2]);
-				un.union(p, q);
+				uf.union(p, q);
 			}
 			
 			timeLast = System.nanoTime() - startTime;
 			
-			hours = TimeUnit.NANOSECONDS.toHours(timeLast);
-			minutes = TimeUnit.NANOSECONDS.toMinutes(timeLast)%60;
-			seconds = TimeUnit.NANOSECONDS.toSeconds(timeLast)%60;
-			nanoSeconds = timeLast%1000000000;
-			
 			System.out.println("======================================================");
-			System.out.println(un.getClass().getSimpleName());
-			if (un.count() == 1) {
+			System.out.println(uf.getClass().getSimpleName());
+			if (uf.count() == 1) {
 				System.out.println("All members connected. Earliest time: " + time);
 			} else {
 				System.out.println("Couldn't find connection between all members.");
-				System.out.println("Number of components: " + un.count());
+				System.out.println("Number of components: " + uf.count());
 			}
-			System.out.printf("Time = H:%d M:%d S:%d nS:%d%n", hours, minutes, seconds, nanoSeconds);
+			calculateTime("Time", timeLast);
 
 		} catch (IOException e ) {
 			e.printStackTrace();
@@ -159,6 +222,14 @@ public class SocialNetworkConnectivity {
 		return timeLast;
 	}
 	
+	/**
+	 * Generates logFile with random values by format:
+	 * timestamp member1id member2id
+	 * where members id's are the id's of members connected on timestamp
+	 * 
+	 * @param numberOfMembers the number of members
+	 * @param numberOfTimestamps the number of entries in logFile
+	 */
 	public static void generateLogFile (int numberOfMembers, int numberOfTimestamps) {
 		try {
 			Path logFile = Files.createTempFile("logFile", ".txt");
@@ -196,6 +267,21 @@ public class SocialNetworkConnectivity {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * Prints the text {@code text} and time {@code time}
+	 * converted to hours, minutes, seconds and nanoseconds. 
+	 * 
+	 * @param text the text to print before time results
+	 * @param time the time in nanoseconds
+	 */
+	public static void calculateTime (String text, long time) {
+		hours = TimeUnit.NANOSECONDS.toHours(time);
+		minutes = TimeUnit.NANOSECONDS.toMinutes(time)%60;
+		seconds = TimeUnit.NANOSECONDS.toSeconds(time)%60;
+		nanoSeconds = time%1000000000;
+		System.out.printf("%s = H:%d M:%d S:%d nS:%d%n", text, hours, minutes, seconds, nanoSeconds);
 	}
 	
 }

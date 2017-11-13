@@ -1,4 +1,4 @@
-package library;
+package resources;
 
 public abstract class UF {
 	public abstract void union(int p, int q);
