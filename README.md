@@ -8,6 +8,7 @@ These mentors are: Robert Sedgewick and Kevin Wayne from Princeton University.
 For additional documentation, see <a href="https://algs4.cs.princeton.edu/home/">Algorithms, 4th Edition</a>.
 
 
+
 Exercise 1. Social Network Connectivity
  * Given a social network containing N members and a log file containing M
  * timestamps at which times pairs of members formed friendships, design an
@@ -19,3 +20,12 @@ Exercise 1. Social Network Connectivity
  *
  * Solving contains comparison of times of different algorithms. 
  
+Exercise 2. Union find with canonical element
+ * Add a method find() to the 
+ * union-find data type so that find(i) returns the largest element in the 
+ * connected component containing i. The operations, union(), connected(), and 
+ * find() should all take logarithmic time or better.
+ * 
+ * For example, if one of the connected components is {1,2,6,9}, then the find() 
+ * method should return 9 for each of the four elements in the connected 
+ * components because 9 is larger 1, 2, and 6.
