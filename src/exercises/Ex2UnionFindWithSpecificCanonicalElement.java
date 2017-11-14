@@ -143,7 +143,7 @@ import resources.WeightedQuickUnionUF;
  *  @author Kevin Wayne
  */
 
-public class UnionFindWithSpecificCanonicalElement {
+public class Ex2UnionFindWithSpecificCanonicalElement {
 
     private int[] parent;  // parent[i] = parent of i
     private byte[] rank;   // rank[i] = rank of subtree rooted at i (never more than 31)
@@ -159,7 +159,7 @@ public class UnionFindWithSpecificCanonicalElement {
      * @param  n the number of sites
      * @throws IllegalArgumentException if {@code n < 0}
      */
-    public UnionFindWithSpecificCanonicalElement(int n) {
+    public Ex2UnionFindWithSpecificCanonicalElement(int n) {
         if (n < 0) throw new IllegalArgumentException();
         count = n;
         parent = new int[n];
@@ -261,7 +261,7 @@ public class UnionFindWithSpecificCanonicalElement {
      */
     public static void main(String[] args) {
         int n = StdIn.readInt();
-        UnionFindWithSpecificCanonicalElement uf = new UnionFindWithSpecificCanonicalElement(n);
+        Ex2UnionFindWithSpecificCanonicalElement uf = new Ex2UnionFindWithSpecificCanonicalElement(n);
         while (!StdIn.isEmpty()) {
             int p = StdIn.readInt();
             int q = StdIn.readInt();

@@ -19,6 +19,7 @@ Exercise 1. Social Network Connectivity
  * better and use extra space proportional to N.
  *
  * Solving contains comparison of times of different algorithms. 
+ <br>
  
 Exercise 2. Union find with canonical element
  * Add a method find() to the 
@@ -29,3 +30,11 @@ Exercise 2. Union find with canonical element
  * For example, if one of the connected components is {1,2,6,9}, then the find() 
  * method should return 9 for each of the four elements in the connected 
  * components because 9 is larger 1, 2, and 6.
+ <br>
+ 
+Exercise 3. Successor with delete 
+ * 
+ * Given a set of N integers S={0,1,...,N?1} and a sequence of requests of the following form:
+ *  - Remove x from S
+ *  - Find the successor of x: the smallest y in S such that y>=x.
+ * design a data type so that all operations (except construction) should take logarithmic time or better.
