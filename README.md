@@ -38,3 +38,15 @@ Exercise 3. Successor with delete
  *  - Remove x from S
  *  - Find the successor of x: the smallest y in S such that y>=x.
  * design a data type so that all operations (except construction) should take logarithmic time or better.
+ <br>
+ 
+ Exercise 4. Percolation
+ *
+ * Given a N-by-N grid of sites. Each site is either open or blocked. 
+ * A full site is an open site that can be connected to an open site 
+ * in the top row via a chain of neighboring (left, right, up, down) open sites. 
+ * We say the system percolates if there is a full site in the bottom row. 
+ * In other words, a system percolates if we fill all open sites connected 
+ * to the top row and that process fills some open site on the bottom row.
+ * More details:<a href="http://coursera.cs.princeton.edu/algs4/assignments/percolation.html">Programming Assignment: Percolation</a>
+ <br>
