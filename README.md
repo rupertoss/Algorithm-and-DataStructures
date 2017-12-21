@@ -50,3 +50,10 @@ Exercise 3. Successor with delete
  * to the top row and that process fills some open site on the bottom row.
  * More details:<a href="http://coursera.cs.princeton.edu/algs4/assignments/percolation.html">Programming Assignment: Percolation</a>
  <br>
+ 
+ Exercise 6. Stack with max
+ *
+ * Create a data structure that efficiently supports the stack 
+ * operations (push and pop) and also a return-the-maximum operation. 
+ * Assume the elements are reals numbers so that you can compare them.
+ <br>
