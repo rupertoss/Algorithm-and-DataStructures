@@ -51,6 +51,12 @@ Exercise 3. Successor with delete
  * More details:<a href="http://coursera.cs.princeton.edu/algs4/assignments/percolation.html">Programming Assignment: Percolation</a>
  <br>
  
+ Exercise 5. Queue with two stacks
+ * 
+ * Implement a queue with two stacks so that each queue operations 
+ * takes a constant amortized number of stack operations.
+ <br>
+ 
  Exercise 6. Stack with max
  *
  * Create a data structure that efficiently supports the stack 
