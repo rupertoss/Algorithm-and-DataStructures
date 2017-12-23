@@ -22,20 +22,39 @@ public class Ex7Dequeue<Item> implements Iterable<Item> {
 		private Node<Item> previous;
 	}
 	
+	/**
+	 * Initializes empty dequeue
+	 */
 	public Ex7Dequeue() {
 		first = null;
 		last = null;
 		size = 0;
 	}
 	
+	/**
+	 * Returns true if dequeue is empty
+	 * 
+	 * @return true if dequeue is empty, false otherwise
+	 */
 	public boolean isEmpty() {
 		return first == null;
 	}
 	
+	/**
+	 * Returns the number of items in dequeue
+	 * 
+	 * @return the number of items in dequeue
+	 */
 	public int size() {
 		return size;
 	}
 	
+	/**
+	 * Add the item to the beginning of dequeue
+	 * 
+	 * @param item adding to dequeue
+	 * @throws IllegalArgumentException if {@code item} is null
+	 */
 	public void addFirst(Item item) {
 		if(item == null) 
 			 throw new IllegalArgumentException();
@@ -51,6 +70,12 @@ public class Ex7Dequeue<Item> implements Iterable<Item> {
 		size++;
 	}
 	
+	/**
+	 * Add the item to the end of dequeue
+	 * 
+	 * @param item adding to dequeue
+	 * @throws IllegalArgumentException if {@code item} is null
+	 */
 	public void addLast(Item item) {
 		if(item == null) {
 			 throw new IllegalArgumentException();
@@ -67,6 +92,12 @@ public class Ex7Dequeue<Item> implements Iterable<Item> {
 		size++;
 	}
 
+	/**
+	 * Removes and returns the item from the beginning of dequeue
+	 *  
+	 * @return the item removed from the beginning of dequeue
+	 * @throws NoSuchElementException if this stack is empty
+	 */
 	public Item removeFirst() {
 		if(size == 0)
 			throw new NoSuchElementException();
@@ -81,6 +112,12 @@ public class Ex7Dequeue<Item> implements Iterable<Item> {
 		return item;
 	}
 	
+	/**
+	 * Removes and returns the item from the end of dequeue
+	 *  
+	 * @return the item removed from the end of dequeue
+	 * @throws NoSuchElementException if this stack is empty
+	 */
 	public Item removeLast() {
 		if(size == 0)
 			throw new NoSuchElementException();
@@ -95,6 +132,11 @@ public class Ex7Dequeue<Item> implements Iterable<Item> {
 		return item;
 	}
 	
+    /**
+     * Returns an iterator to this dequeue that iterates through the items from beginning to end
+     *
+     * @return an iterator to this dequeue that iterates through the items from beginning to end
+     */
 	public Iterator<Item> iterator() {
 		return new ListIterator<Item>(first);
 	}
@@ -122,6 +164,11 @@ public class Ex7Dequeue<Item> implements Iterable<Item> {
 		}
 	}
 	
+    /**
+     * Returns a string representation of this dequeue
+     *
+     * @return the sequence of items in this dequeue from beginning to end, separated by spaces
+     */
     public String toString() {
         StringBuilder s = new StringBuilder();
         for (Item item : this) {

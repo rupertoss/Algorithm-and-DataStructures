@@ -33,7 +33,6 @@ Exercise 2. Union find with canonical element
  <br>
  
 Exercise 3. Successor with delete 
- * 
  * Given a set of N integers S={0,1,...,N?1} and a sequence of requests of the following form:
  *  - Remove x from S
  *  - Find the successor of x: the smallest y in S such that y>=x.
@@ -41,25 +40,29 @@ Exercise 3. Successor with delete
  <br>
  
  Exercise 4. Percolation
- *
  * Given a N-by-N grid of sites. Each site is either open or blocked. 
  * A full site is an open site that can be connected to an open site 
  * in the top row via a chain of neighboring (left, right, up, down) open sites. 
  * We say the system percolates if there is a full site in the bottom row. 
  * In other words, a system percolates if we fill all open sites connected 
  * to the top row and that process fills some open site on the bottom row.
- * More details:<a href="http://coursera.cs.princeton.edu/algs4/assignments/percolation.html">Programming Assignment: Percolation</a>
+ * More details: <a href="http://coursera.cs.princeton.edu/algs4/assignments/percolation.html">Programming Assignment: Percolation</a>
  <br>
  
  Exercise 5. Queue with two stacks
- * 
  * Implement a queue with two stacks so that each queue operations 
  * takes a constant amortized number of stack operations.
  <br>
  
  Exercise 6. Stack with max
- *
  * Create a data structure that efficiently supports the stack 
  * operations (push and pop) and also a return-the-maximum operation. 
  * Assume the elements are reals numbers so that you can compare them.
+ <br>
+ 
+ Exercise 7. Dequeue
+ * A double-ended queue or deque (pronounced “deck”) is a generalization 
+ * of a stack and a queue that supports adding and removing items 
+ * from either the front or the back of the data structure.
+ * More details: <a href="http://coursera.cs.princeton.edu/algs4/assignments/queues.html">Programming Assignment: Deques and Randomized Queues</a>
  <br>
