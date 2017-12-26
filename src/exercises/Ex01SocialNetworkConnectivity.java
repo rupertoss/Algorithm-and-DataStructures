@@ -85,7 +85,7 @@ import resources.WeightedQuickUnionByHeightUF;
 import resources.WeightedQuickUnionPathCompressionUF;
 import resources.WeightedQuickUnionUF;
 
-public class Ex1SocialNetworkConnectivity {
+public class Ex01SocialNetworkConnectivity {
 	private static int numberOfMembers;
 	private static int numberOfTimestamps;
 	private static QuickFindUF quickFind;

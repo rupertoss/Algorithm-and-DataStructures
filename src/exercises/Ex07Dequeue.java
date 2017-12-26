@@ -11,7 +11,7 @@ package exercises;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Ex7Dequeue<Item> implements Iterable<Item> {
+public class Ex07Dequeue<Item> implements Iterable<Item> {
 	private Node<Item> first;
 	private Node<Item> last;
 	private int size;
@@ -25,7 +25,7 @@ public class Ex7Dequeue<Item> implements Iterable<Item> {
 	/**
 	 * Initializes empty dequeue
 	 */
-	public Ex7Dequeue() {
+	public Ex07Dequeue() {
 		first = null;
 		last = null;
 		size = 0;
@@ -180,7 +180,7 @@ public class Ex7Dequeue<Item> implements Iterable<Item> {
 	
 	public static void main(String[] args) {
 		
-		Ex7Dequeue<Integer> q = new Ex7Dequeue<>();
+		Ex07Dequeue<Integer> q = new Ex07Dequeue<>();
 		
 		int i = 1;
 		int N = 20;

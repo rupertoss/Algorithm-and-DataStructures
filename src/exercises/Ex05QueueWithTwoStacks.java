@@ -9,7 +9,7 @@ package exercises;
 
 import resources.Stack;
 
-public class Ex5QueueWithTwoStacks {
+public class Ex05QueueWithTwoStacks {
 	
 	
 	private Stack<Integer> sIn = new Stack<>();		// stack containing input elements
@@ -66,7 +66,7 @@ public class Ex5QueueWithTwoStacks {
 	// for testing
 	public static void main(String[] args) {
 		
-		Ex5QueueWithTwoStacks queue = new Ex5QueueWithTwoStacks();
+		Ex05QueueWithTwoStacks queue = new Ex05QueueWithTwoStacks();
 	    int i = 0;
 	    int N = 150;
 

@@ -43,7 +43,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Ex4Percolation {
+public class Ex04Percolation {
 	
 	private boolean [] open;
 	
@@ -56,7 +56,7 @@ public class Ex4Percolation {
      * 
      * @param size the integer representing size of the block
      */
-	private Ex4Percolation(int size) {
+	private Ex04Percolation(int size) {
 		
 		//initializing arrays
 		open = new boolean[(size*size)+2];
@@ -193,9 +193,9 @@ public class Ex4Percolation {
 		scan.close();
 		
 		//running the percolations
-		List<Ex4Percolation> percolations = new LinkedList<Ex4Percolation>();
+		List<Ex04Percolation> percolations = new LinkedList<Ex04Percolation>();
 		for (int i=0; i < runs; i++) {
-			percolations.add(new Ex4Percolation(size));
+			percolations.add(new Ex04Percolation(size));
 		}
 		
 		//statistics data
@@ -203,13 +203,13 @@ public class Ex4Percolation {
 		double thresholdMean;
 		double tmpStdDev = 0;
 		
-		for (Ex4Percolation per: percolations) {
+		for (Ex04Percolation per: percolations) {
 			sum += per.count/(double)(size*size);
 		}
 		
 		thresholdMean = sum/runs;
 		
-		for (Ex4Percolation per: percolations) {
+		for (Ex04Percolation per: percolations) {
 			tmpStdDev += Math.pow((double)per.count/(double)(size*size) - thresholdMean, 2);
 		}
 		

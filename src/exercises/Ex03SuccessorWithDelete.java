@@ -14,7 +14,7 @@
 
 package exercises;
 
-public class Ex3SuccessorWithDelete {
+public class Ex03SuccessorWithDelete {
 	
     private int[] parent;  // parent[i] = parent of i
     
@@ -23,7 +23,7 @@ public class Ex3SuccessorWithDelete {
      * 
      * @param n the number of sites
      */
-    public Ex3SuccessorWithDelete(int n) {
+    public Ex03SuccessorWithDelete(int n) {
         parent = new int[n];
         for (int i = 0; i < n; i++) {
             parent[i] = i;

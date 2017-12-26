@@ -8,7 +8,7 @@
 
 package exercises;
 
-public class Ex6StackWithMax {
+public class Ex06StackWithMax {
 	
 	private Node first = null;
 	private Node max = null;
