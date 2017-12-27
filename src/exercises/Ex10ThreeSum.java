@@ -14,11 +14,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Ex10ThreeSum {
+	ArrayList<String> results;
 	
-	public ArrayList<String> threeSum (int[] data) {
+	public Ex10ThreeSum (int[] data) {
 		
 		Arrays.sort(data);
-		ArrayList<String> results = new ArrayList<>();
+		results = new ArrayList<>();
 		
 		for (int i=0; i < data.length; i++) {
 			int firstPointer = i + 1;
@@ -35,7 +36,6 @@ public class Ex10ThreeSum {
 				}
 			}
 		}
-		return results;
 	}
 }
 

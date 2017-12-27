@@ -67,10 +67,21 @@ Exercise 3. Successor with delete
  * More details: <a href="http://coursera.cs.princeton.edu/algs4/assignments/queues.html">Programming Assignment: Deques and Randomized Queues</a>
  <br>
  
- 3-SUM in quadratic time. 
+ Exercise 10. 3-SUM in quadratic time. 
  * Design an algorithm for the 3-SUM problem that takes time 
  * proportional to n2 in the worst case. 
  * You may assume that you can sort the n integers in time proportional to n2 or better.
  * 
  * The solution is based on 2SUM algorithm.
+ <br>
+ 
+ Exercise 11. Search in a bitonic array. 
+ * An array is bitonic if it is comprised of an increasing sequence 
+ * of integers followed immediately by a decreasing sequence of integers. 
+ * Write a program that, given a bitonic array of n distinct integer values, 
+ * determines whether a given integer is in the array.
+ * 
+ * Standard version: Use ~3lgn compares in the worst case.
+ * Signing bonus: Use ~2lgn compares in the worst case (and prove that no algorithm 
+ * can guarantee to perform fewer than ~2lgn compares in the worst case).
  <br>
