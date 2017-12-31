@@ -23,6 +23,9 @@
  ******************************************************************************/
 package resources;
 
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
 /******************************************************************************
  *  Compilation:  javac QuickUnionUF.java
  *  Execution:  java QuickUnionUF < input.txt

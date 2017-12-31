@@ -1,13 +1,7 @@
-/**
- * Queue with two stacks. 
- * 
- * Implement a queue with two stacks so that each queue operations 
- * takes a constant amortized number of stack operations.
- */
 
 package exercises;
 
-import resources.Stack;
+import edu.princeton.cs.algs4.Stack;
 
 public class Ex05QueueWithTwoStacks {
 	

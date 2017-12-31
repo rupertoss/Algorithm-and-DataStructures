@@ -23,6 +23,11 @@
  ******************************************************************************/
 package resources;
 
+import edu.princeton.cs.algs4.QuickFindUF;
+import edu.princeton.cs.algs4.QuickUnionUF;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
 /******************************************************************************
  *  Compilation:  javac WeightedQuickUnionUF.java
  *  Execution:  java WeightedQuickUnionUF < input.txt

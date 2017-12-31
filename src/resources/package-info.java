@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author rupertoss
- *
- */
-package resources;
