@@ -7,15 +7,16 @@ Programs uses algorithms written by mentors in above-mentioned course.
 These mentors are: Robert Sedgewick and Kevin Wayne from Princeton University. 
 For additional documentation, see <a href="https://algs4.cs.princeton.edu/home/">Algorithms, 4th Edition</a>.
 
-According to Coursera Honor Code, I decided to do not post task here so its will not be indexed by Google.
+According to Coursera Honor Code, I decided to do not post tasks here so its will not be indexed by Google.
 Check the link above for details.
 
-Exercise 1. Social Network Connectivity
-Exercise 2. Union find with canonical element
-Exercise 3. Successor with delete 
-Exercise 4. Percolation
-Exercise 5. Queue with two stacks
-Exercise 6. Stack with max
-Exercise 7. Dequeue
-Exercise 10. 3-SUM in quadratic time. 
-Exercise 11. Search in a bitonic array. 
+Ex01.Social Network Connectivity
+Ex02.Union find with canonical element
+Ex03.Successor with delete
+Ex04.Percolation
+Ex05.Queue with two stacks
+Ex06.Stack with max
+Ex07.Dequeue
+Ex10.3-SUM in quadratic time
+Ex11.Search in a bitonic array
+Ex12.Egg Drop
