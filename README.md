@@ -17,6 +17,7 @@ Check the link above for details.
 - Ex05.Queue with two stacks
 - Ex06.Stack with max
 - Ex07.Dequeue
+- Ex08.Randomized queue
 - Ex10.3-SUM in quadratic time
 - Ex11.Search in a bitonic array
 - Ex12.Egg Drop
