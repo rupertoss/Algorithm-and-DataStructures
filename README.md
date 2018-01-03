@@ -24,3 +24,4 @@ Check the link above for details.
 - Ex12.EggDrop
 - Ex13.IntersectionOfTwoSets
 - Ex14.Permutation
+- Ex15.DutchNationalFlag
