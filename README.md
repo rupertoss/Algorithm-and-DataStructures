@@ -18,7 +18,9 @@ Check the link above for details.
 - Ex06.StackWithMax
 - Ex07.Dequeue
 - Ex08.RandomizedQueue
+- Ex09.PermutationClient
 - Ex10.3-SumInQuadraticTime
 - Ex11.SearchInABitonicArray
 - Ex12.EggDrop
 - Ex13.IntersectionOfTwoSets
+- Ex14.Permutation
