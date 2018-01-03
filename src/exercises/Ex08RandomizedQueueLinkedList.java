@@ -4,6 +4,13 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Linked List implementation with removing and iterating elements by random
+ * Adding element runs in constant time.
+ * Iterating and removing element runs in subquadratic time.
+ * 
+ * @author rupertoss
+ */
 public class Ex08RandomizedQueueLinkedList<Item> {
 
 	private Node<Item> first;
@@ -13,20 +20,39 @@ public class Ex08RandomizedQueueLinkedList<Item> {
 		private Item item;
 		private Node<Item> next;
 	}
-
+	
+	/**
+	 * Constructs empty RQLL with {@code size} set to 0
+	 */
 	public Ex08RandomizedQueueLinkedList() {
 		first = null;
 		size = 0;
 	}
 
+	/**
+	 * Returns true if RQLL is empty
+	 * 
+	 * @return true when {@code size} is zero, false otherwise
+	 */
 	public boolean isEmpty() {
 		return size == 0;
 	}
 
+	/**
+	 * Returns number of elements in RQLL
+	 * 
+	 * @return the integer representing number of elements in RQLL
+	 */
 	public int size() {
 		return size;
 	}
 
+	/**
+	 * Adds the {@code item} at the front of the RQLL
+	 * 
+	 * @param item adding to RQLL
+	 * @throws IllegalArgumentException when {@code item} is null
+	 */
 	public void enqueue(Item item) {
 		if(item == null) 
 			throw new IllegalArgumentException();
@@ -36,6 +62,11 @@ public class Ex08RandomizedQueueLinkedList<Item> {
 		first.item = item;
 	}
 
+	/**
+	 * Removes random element from RQLL and returns {@code item} property of that element
+	 * 
+	 * @return {@code item} property of removed element
+	 */
 	public Item dequeue() {
 		if(isEmpty())
 			throw new NoSuchElementException();
@@ -58,9 +89,15 @@ public class Ex08RandomizedQueueLinkedList<Item> {
 			else
 				helper.next = helper.next.next;
 		}
+		size--;
 		return toDelete.item;
 	}
 	
+	/**
+	 * Returns {@code item} property of random element
+	 * 
+	 * @return {@code item} property of random element
+	 */
 	public Item sample() {
 		if(isEmpty())
 			throw new NoSuchElementException();
@@ -72,6 +109,11 @@ public class Ex08RandomizedQueueLinkedList<Item> {
 		return sample.item;
 	}
 	
+	/**
+	 * Returns an iterator to this RQLL that iterates through elements by random
+	 * 
+	 * @return an iterator to this RQLL that iterates through elements by random
+	 */
 	public Iterator<Item> iterator() {
 		return new RandomIterator<Item>(first);
 	}

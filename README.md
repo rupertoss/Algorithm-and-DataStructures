@@ -10,15 +10,15 @@ For additional documentation, see <a href="https://algs4.cs.princeton.edu/home/"
 According to Coursera Honor Code, I decided to do not post tasks here so its will not be indexed by Google.
 Check the link above for details.
 
-- Ex01.Social Network Connectivity
-- Ex02.Union find with canonical element
-- Ex03.Successor with delete
+- Ex01.SocialNetworkConnectivity
+- Ex02.UnionFindWithCanonicalElement
+- Ex03.SuccessorWithDelete
 - Ex04.Percolation
-- Ex05.Queue with two stacks
-- Ex06.Stack with max
+- Ex05.QueueWithTwoStacks
+- Ex06.StackWithMax
 - Ex07.Dequeue
-- Ex08.Randomized queue
-- Ex10.3-SUM in quadratic time
-- Ex11.Search in a bitonic array
-- Ex12.Egg Drop
+- Ex08.RandomizedQueue
+- Ex10.3-SumInQuadraticTime
+- Ex11.SearchInABitonicArray
+- Ex12.EggDrop
 - Ex13.IntersectionOfTwoSets
