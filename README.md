@@ -25,3 +25,4 @@ Check the link above for details.
 - Ex13.IntersectionOfTwoSets
 - Ex14.Permutation
 - Ex15.DutchNationalFlag
+- Ex16.MergingWithSmallerAuxiliaryArray
