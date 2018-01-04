@@ -26,3 +26,4 @@ Check the link above for details.
 - Ex14.Permutation
 - Ex15.DutchNationalFlag
 - Ex16.MergingWithSmallerAuxiliaryArray
+- Ex17.CountingInversions
