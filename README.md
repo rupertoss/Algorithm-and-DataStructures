@@ -27,3 +27,4 @@ Check the link above for details.
 - Ex15.DutchNationalFlag
 - Ex16.MergingWithSmallerAuxiliaryArray
 - Ex17.CountingInversions
+- Ex18.ShufflingALinkedList
