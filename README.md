@@ -28,3 +28,4 @@ Check the link above for details.
 - Ex16.MergingWithSmallerAuxiliaryArray
 - Ex17.CountingInversions
 - Ex18.ShufflingALinkedList
+- Ex20.NutsAndBolts

@@ -139,6 +139,6 @@ public class Ex12EggDrop {
 	}
 	
 	public static void main(String[] args) {
-		Ex12EggDrop egg = new Ex12EggDrop(10000);
+		new Ex12EggDrop(10000);
 	}
 }

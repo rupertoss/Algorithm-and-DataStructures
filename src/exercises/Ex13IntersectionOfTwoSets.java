@@ -103,6 +103,6 @@ public class Ex13IntersectionOfTwoSets {
 	}
 	
 	public static void main(String[] args) {
-		Ex13IntersectionOfTwoSets intersection = new Ex13IntersectionOfTwoSets(50, 10);
+		new Ex13IntersectionOfTwoSets(50, 10);
 	}
 }

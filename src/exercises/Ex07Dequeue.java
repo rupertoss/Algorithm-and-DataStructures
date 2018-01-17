@@ -133,7 +133,7 @@ public class Ex07Dequeue<Item> implements Iterable<Item> {
 		return new ListIterator<Item>(first);
 	}
 	
-	private class ListIterator<Item> implements Iterator<Item> {
+	private class ListIterator<T> implements Iterator<Item> {
 		private Node<Item> current;
 		
 		public ListIterator(Node<Item> first) {
