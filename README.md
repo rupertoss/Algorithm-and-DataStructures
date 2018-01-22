@@ -30,3 +30,4 @@ Check the link above for details.
 - Ex18.ShufflingALinkedList
 - Ex20.NutsAndBolts
 - Ex21.SelectionInTwoSortedArrays
+- Ex22.DecimalDominants
