@@ -31,4 +31,5 @@ Check the link above for details.
 - Ex20.NutsAndBolts
 - Ex21.SelectionInTwoSortedArrays
 - Ex22.DecimalDominants
+- Ex23.DynamicMedian
 - Ex24.TaxicabNumbers
