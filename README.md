@@ -33,3 +33,4 @@ Check the link above for details.
 - Ex22.DecimalDominants
 - Ex23.DynamicMedian
 - Ex24.TaxicabNumbers
+- Ex26.CheckIfABinarySearchTreeIsABinarySearchTree
