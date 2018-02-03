@@ -34,3 +34,4 @@ Check the link above for details.
 - Ex23.DynamicMedian
 - Ex24.TaxicabNumbers
 - Ex26.CheckIfABinarySearchTreeIsABinarySearchTree
+- Ex27.DocumentSearch
