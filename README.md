@@ -35,3 +35,4 @@ Check the link above for details.
 - Ex24.TaxicabNumbers
 - Ex26.CheckIfABinarySearchTreeIsABinarySearchTree
 - Ex27.DocumentSearch
+- Ex28.GeneralizedQueue
