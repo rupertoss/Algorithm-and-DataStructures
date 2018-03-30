@@ -37,3 +37,5 @@ Check the link above for details.
 - Ex27.DocumentSearch
 - Ex28.GeneralizedQueue
 - Ex30.FourSum
+
+- Ex31.TwoDimensionalArraySpiralWay
